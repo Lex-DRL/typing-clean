@@ -22,12 +22,6 @@
 
 ---
 
-## Version
-- First two numbers: oldest Python version supported;
-- Last number: minor update within it.
-
-The installed python and `typing-extensions` determine which version of `typing-clean` to install.
-
 ## How
 This module is deliberately the most barebones wrapper: it implements NOTHING. It merely imports from `typing` and `typing_extensions` with prefixed names. Any IDE should be 100% compatible with it.
 
@@ -77,7 +71,7 @@ You **could** define your own service submodule which simply imports from `typin
 
 The only thing the module defines by itself is a set of TypeVars:
 - both in `typing` and `typing_extensions` the defined ones aren't exported, so even though at runtime their import works just fine, some IDEs complain that they can't find them;
-- the built-in set was too short for me, so I defined extra 3 numbered versions for each.
+- the built-in set often isn't enough, so I defined extra 3 numbered versions for each.
 
 <div align="center">
 
@@ -90,3 +84,9 @@ The only thing the module defines by itself is a set of TypeVars:
 | Ditto contravariant:<br/>`TypeVar(..., contravariant=True)` | `_T_contra` | `_T2_contra` | `_T3_contra` | `_T4_contra` |
 | [Parameter specifier](https://docs.python.org/3/library/typing.html#typing.ParamSpec) | `_P` | `_P2` | `_P3` | `_P4` |
 </div>
+
+## Version
+- First two numbers: oldest Python version supported;
+- Last number: minor update within it.
+
+The installed python and `typing-extensions` determine which version of `typing-clean` to install.
