@@ -466,6 +466,8 @@ from typing import (
 	ValuesView as _VV,
 )
 
+############################################################
+
 # TypeVars
 from .__tv import (
 	T as _T,
@@ -493,3 +495,5 @@ from .__tv import (
 	P3 as _P3,
 	P4 as _P4,
 )
+
+from .___package_meta import __version__
