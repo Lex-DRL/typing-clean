@@ -6,8 +6,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "typing-clean"
-#dynamic = ["version"]
-version = "3.6.99"
+dynamic = ["version"]
+#version = "3.6.99"
 description = """Syntax sugar: import contents of built-in "typing" module — with protected and shortened names"""
 authors = [
 	{ name="Lex Darlog (Lex-DRL)" },
@@ -31,8 +31,8 @@ classifiers = [
 "Source Code" = "https://github.com/Lex-DRL/typing-clean"
 Issues = "https://github.com/Lex-DRL/typing-clean/issues"
 
-# [tool.hatch.version]
-# path = "src/typing_clean/___package_meta.py"
+[tool.hatch.version]
+path = "src/typing_clean/___package_meta.py"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/typing_clean"]
